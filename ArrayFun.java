@@ -13,9 +13,13 @@ public class ArrayFun
 Square[] myArray;
 
 //Array variable "myArray" 	  6 objects 
-//basic array
+//default array
 public ArrayFun() {
-	Square[] myArray = new Square[6];
+	myArray = new Square[6];
+	for(int i=0;i<6;i++)
+	{
+		myArray[i] = new Square(i);
+	}
 }
 
 //setter
@@ -28,45 +32,26 @@ public Square getArrayItem( int index)
 {
 	return myArray[index];
 }
-//Preferred constructor 
-int size = myArray.length;
-public ArrayFun(int size) 
-{
-	Square Square0 = new Square();
-	myArray[0] = Square0;
-	
-	Square Square1 = new Square();
-	myArray[1] = Square1;
-	
-	Square Square2 = new Square();
-	myArray[2] = Square2;
-	
-	Square Square3 = new Square();
-	myArray[3] = Square3;
-	
-	Square Square4 = new Square();
-	myArray[4] = Square4;
-	
-	Square Square5 = new Square();
-	myArray[5] = Square5;
-
-}//end of ArrayFun preferred constructor
-
 public void forward() {
 	for(int i=0;i<6;i++) {
-		myArray[i].side=i;
-	System.out.println(i);
+		System.out.println(myArray[i].area());
 	}
-}
+}//end of forward constructor
 public void backward() {
-	
-}
+	for(int i=6-1;i>=0;i--) 
+	{
+		System.out.println(myArray[i].area());
+	}
+}//end of backward constructor
 public void sum() {
-	for (int i = 0; i >= 1; --i) {
-	      int sum = i;     
-	      System.out.println(i);
-	    }
+	int accum = 0;
+	for(int i=0;i<6;i++) 
+	{
+	myArray[i].area();
+	accum = accum + myArray[i].area();
+	System.out.println(accum);
 
-}
+	}
+}//end of sum constructor
 
 }//end class

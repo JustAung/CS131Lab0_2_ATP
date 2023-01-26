@@ -20,12 +20,6 @@ public class Application {
 		{
 			sArray=aSquare;
 		}*/
-		Square sqr = new Square(3);
-		System.out.println("Square area: "+sqr.area());
-		
-		Circle cir = new Circle(4);
-		System.out.println("Circle area: "+cir.area());
-
 		
 		ArrayFun arf = new ArrayFun();
 		System.out.println("Forward: ");
@@ -34,6 +28,7 @@ public class Application {
 		arf.backward();
 		System.out.println("Sum: ");
 		arf.sum();
+		
 	}
 
 }

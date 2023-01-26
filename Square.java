@@ -9,14 +9,14 @@
  */
 public class Square 
 {
-double side;
+int side;
 //variable side
 //getter
 public double getSide(){
 	return side;
 }
 //setter
-public void setSide(double side) {
+public void setSide(int side) {
 	this.side=side;
 }
 //default constructor
@@ -24,13 +24,12 @@ public Square() {
 	side = 0;
 }
 //preferred constructor s is the parameter
-public Square(double s) {
+public Square(int s) {
 	side = s;
 }
 //method
-public double area() {
-	double area_square = Math.pow(side, 2);
-	return area_square;
+public int area() {
+	return side*side;
 }
 
 }
